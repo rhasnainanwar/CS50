@@ -28,9 +28,17 @@ string cipher(string message, int key){
 	for(int i = 0; message[i] != '\0'; i++){
 	
 	    if( isalpha(message[i]) ){
-            message[i] += key; //adding key
-    			while( !isalpha( message[i] )) //if exceeding ASCII, go round // for UPPER
+		    if( isupper( message[i] ) ){
+            	message[i] +=  key; //adding key
+    			while(  message[i] > 'Z') //if exceeding ASCII, go round // for UPPER
     				message[i] -= 26;
+            }
+	            
+			else if( islower( message[i] ) ){
+				message[i] +=  key; //adding key
+        		while( !isalpha( message[i] )) //if exceeding ASCII, go round // for UPPER
+    				message[i] -= 26;
+			}
 		}
 	}
 	
