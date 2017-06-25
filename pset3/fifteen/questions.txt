@@ -1,0 +1,4 @@
+0. The framework allows dimensions from 3x3 upto 9x9, where the width and height will remain the same. n x n, n is in range [3, 9].
+1. The board is represented using a 2-D array.
+2. void greet(void); is used to greet the player. It takes no arguments, so all the players are greeted alike, it just prints something and doesn't return anything.
+3. The pset requires the implementation of fuctions: init(), draw(), move(), and won().
