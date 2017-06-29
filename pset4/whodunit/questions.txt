@@ -1,0 +1,31 @@
+1.  stdint.h is a special header file which helps to use different types of int. We can use different sizes of int according to our need, e.g., 8-bit, 16-bit etc. Thus, eliminating size variations among different platforms.
+This is very important for better/efficient memory usage, but can lead to overflow conditions.
+
+2.  The 'u' at the beginning stands for unsigned. This helps us to use unsigned or signed version of a datatype (int) when needed.
+Also, the numbers stand for the size of the variable. Thus, we can use 8-bit, 16-bit or 32-bit ints as we need. The use of smaller size when needed is an efficient memory management approach.
+
+3.  The sizes in bits are as follows:
+BYTE: 8 unsigned
+DWORD: 32 unsigned
+LONG: 32 signed
+WORD: 16 unsigned
+
+4.  42 4D
+
+5.  bfSize is the size of bitmap image in bytes. biSize is the number of bytes required by the structure.
+
+6.  In RGB format, negative height would indicate that the the bitmap image is top-to-bottom. Meaning that the origin is top left corner of the image.
+
+7.  biBitCount
+
+8.  For line 24 specifically, null could be returned if the file to be read doesn't exist already.
+Both statements will return null if the user/program doesn't have permsission to do file operations at that particular location.
+
+9.  This third argument specifies the number of elements, each of size specified in the second argument. At first, we read the the headers as a whole thus we needed only one header struct for each header. So we needed 1 struct element to read from the file.
+Later, we needed to read pixels one-by-one. For this we have already a struct. Thus we are reading one strut at a time. So 1 element!
+
+10. 3
+
+11. fseek skips over the padding (if any)
+
+12. The third argument in fseek() gives the position where to start skipping. SEEK_CUR is a constant that can be used there. It tell the program to skip from the current position of file pointer.
