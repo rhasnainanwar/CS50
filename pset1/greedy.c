@@ -4,16 +4,14 @@
 
 int main(void){
     
-    float owed;//variable
+    float amount;//variable
     
     do {
         printf("How much is owed?\n");
-        owed = get_float();
-    } while(owed < 0);//validation
+        amount = get_float();
+    } while(amount < 0);//validation
     
-    owed *= 100;//converting to cents
-    owed = ceil(owed);
-    
+    int owed = round(amount * 100);//converting to cents
     int coins = 0;
     int quarter = 25;
     int dime = 10;
